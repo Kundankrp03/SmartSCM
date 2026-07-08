@@ -1,4 +1,4 @@
-# SmaerSCM 📦🚚
+# SmartSCM 📦🚚
 
 A modern, fully functional Supply Chain Management (SCM) system designed to streamline inventory tracking, manage suppliers, and monitor logistics efficiently. Built using a robust full-stack architecture.
 
