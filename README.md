@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmaerSCM 📦🚚
 
-## Getting Started
+A modern, fully functional Supply Chain Management (SCM) system designed to streamline inventory tracking, manage suppliers, and monitor logistics efficiently. Built using a robust full-stack architecture.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+* **Role-Based Access Control (RBAC):** Distinct dashboards and permissions for Admins, Warehouse Managers, and Suppliers.
+* **Inventory Management:** Real-time CRUD operations for tracking products, stock levels, and warehouse locations.
+* **Supplier Management:** Maintain a directory of vendors, track purchase orders, and manage deliveries.
+* **Order Tracking & Logistics:** Monitor shipment statuses from dispatch to delivery (e.g., Pending, Shipped, In-Transit, Delivered).
+* **Interactive Dashboard:** Visual analytics for stock levels, pending orders, and overall supply chain health.
+* **Secure Authentication:** JWT-based secure login and registration.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+| :--- | :--- |
+| **React.js / Vite** | Frontend User Interface |
+| **Node.js & Express.js**| Backend API & Server |
+| **MongoDB & Mongoose** | Database & Object Data Modeling |
+| **Tailwind CSS** | Styling and Responsive Design |
+| **JSON Web Token (JWT)**| Secure User Authentication |
+
+---
+
+## ⚙️ Prerequisites
+
+Before you begin, ensure you have the following installed:
+* **Node.js** (v16 or higher)
+* **MongoDB** (Local instance or a MongoDB Atlas URI)
+* **Git**
+
+---
+
+## 💻 Local Setup & Installation
+
+**1. Clone the repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [https://github.com/Kundankrp03/SmaerSCM.git](https://github.com/Kundankrp03/SmaerSCM.git)
+cd SmaerSCM
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Setup the Backend**
+```bash
+cd backend
+npm install
+```
+* Create a `.env` file in the `backend` directory and configure your environment variables:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_key
+```
+* Start the backend development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**3. Setup the Frontend**
+```bash
+cd ../frontend
+npm install
+```
+* Start the frontend development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📡 API Endpoints Reference (Example)
 
-To learn more about Next.js, take a look at the following resources:
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/auth/register` | Register a new user |
+| `POST` | `/api/auth/login` | Authenticate user and return JWT |
+| `GET` | `/api/inventory` | Fetch all inventory items (Protected) |
+| `POST` | `/api/inventory` | Add a new item to inventory (Protected) |
+| `GET` | `/api/orders` | Fetch supply chain orders |
+| `PUT` | `/api/orders/:id` | Update order shipment status |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Contributions, issues, and feature requests are welcome! 
+Feel free to check the [issues page](https://github.com/Kundankrp03/SmaerSCM/issues).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project is open-source and available under the MIT License.
